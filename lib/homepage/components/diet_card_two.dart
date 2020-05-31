@@ -3,13 +3,12 @@ import 'package:crowd_fund_newsfeed/homepage/components/components/post_card_com
 import 'package:crowd_fund_newsfeed/homepage/components/components/post_card_description.dart';
 import 'package:crowd_fund_newsfeed/homepage/components/components/post_card_footer.dart';
 import 'package:crowd_fund_newsfeed/homepage/components/components/post_card_location.dart';
-import 'package:crowd_fund_newsfeed/homepage/components/components/post_card_title.dart';
 import 'package:crowd_fund_newsfeed/homepage/components/components/post_card_title_heading.dart';
 import 'package:crowd_fund_newsfeed/homepage/components/components/post_card_title_userInfo.dart';
-
+import 'package:crowd_fund_newsfeed/homepage/components/components/post_fb_like_button.dart';
 import 'package:flutter/material.dart';
 
-class DietCard extends StatelessWidget {
+class DietCardTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -31,21 +30,15 @@ class DietCard extends StatelessWidget {
               height: 10,
             ),
             CustomTitleUserInfo(
-              image: AssetImage('assets/images/user1.png'),
-              title: 'rohit.shetty12 asked a question',
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CustomCardTitle(
-              description: 'What are the signs and symptoms of skin cancer?',
+              image: AssetImage('assets/images/2.png'),
+              title: 'priya321',
             ),
             SizedBox(
               height: 10,
             ),
             CustomCardDescription(
               content:
-                  'I’ve been facing a few possibble symptoms of skin cancer. I’ve googled the possibilities but i thought i’d ask the community inste..\nSee More',
+                  'My husband has his 3 days transplant assessment in Newcastle next month, strange mix of emotions. For those that have been through this how long did it take following assessment was it until you were..\nSee More ',
             ),
             SizedBox(
               height: 10,
@@ -56,6 +49,7 @@ class DietCard extends StatelessWidget {
               comments: '24 members have this question',
             ),
             Divider(color: AppTheme.appBorderColor),
+            CustomFbLikeButton(),
             CustomCardFotter()
           ],
         ),

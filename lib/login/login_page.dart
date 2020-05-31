@@ -36,30 +36,24 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 // Image.asset(name)
                 ContainerFluid(
-                 
                   child: Image.asset('assets/images/image.png'),
                 ),
                 ContainerFluid(
-                
                   child: Text(
                     "Welcome to \nHealthNest",
-                   style: 
-                      GoogleFonts.inter(
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30.0,
-                        color: Color(0xff545B63),
-                      ),
+                    style: GoogleFonts.inter(
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30.0,
+                      color: Color(0xff545B63),
                     ),
-            
-                     
-                    ),
-          
+                  ),
+                ),
+
                 ContainerFluid(
-                  
                   child: TextField(
                     keyboardType: TextInputType.number,
-                   // onSubmitted: null,
+                    // onSubmitted: null,
                     controller: myController,
                     onChanged: (String value) {
                       isEmpty();
@@ -67,7 +61,6 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     cursorColor: Colors.grey,
                     decoration: InputDecoration(
-
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey),
                         ),
@@ -83,31 +76,34 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 ContainerFluid(
-                 
                   child: Text(
                     "We never compromise on security! \n Help us create a safe place by providing your mobile number to maintain authenticity",
                     style: TextStyle(
-                         fontSize: 15.0,
-                        fontWeight: FontWeight.normal,
-                        fontStyle: FontStyle.normal,
-                        color: Color(0xffA5B1C2),
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.normal,
+                      fontStyle: FontStyle.normal,
+                      color: Color(0xffA5B1C2),
                     ),
                   ),
                 ),
                 Center(
                   child: Container(
-                    
                       child: FlatButton(
-
-                        disabledColor: Colors.grey,
+                          disabledColor: Colors.grey,
                           padding: EdgeInsets.all(20.0),
                           color: Color(0xff00A981),
                           textColor: Colors.white,
-                          onPressed: isButtonEnabled ?(){
-                            print('button enabled');
-                           Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),
-                           ),);
-                          } : null,
+                          onPressed: isButtonEnabled
+                              ? () {
+                                  print('button enabled');
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => HomePage(),
+                                    ),
+                                  );
+                                }
+                              : null,
                           child: Text("Send OTP"))),
                 )
               ],
